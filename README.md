@@ -2,22 +2,6 @@
 
 This is a simplified Big data pipeline for user sentiment analysis on US stock market
 
-# Project Structure
-
-hashtagcashtag/
-├── ingestion/
-│   ├── twitter_stream.py           # Collects tweets with $ symbols
-│   └── stock_stream.py             # Collects stock prices via yfinance
-├── processing/
-│   └── spark_sentiment.py          # Spark job to process tweets + sentiment
-├── dashboard/
-│   └── app.py                      # Flask web app to show trends
-├── db/
-│   └── schema.sql                  # PostgreSQL schema setup
-├── docker-compose.yml             # Kafka, Zookeeper, PostgreSQL setup
-├── requirements.txt               # Python dependencies
-└── README.md                      # Your project documentation
-
 ---
 
 #  1. Installation & Setup (Local)
