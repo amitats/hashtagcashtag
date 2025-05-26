@@ -138,7 +138,7 @@ pyspark
 
 ---
 
-# ✅ Final Tips
+#  Final Tips
 - Run Twitter and stock ingestors first
 - Start Spark job
 - Load dummy data into PostgreSQL if needed
