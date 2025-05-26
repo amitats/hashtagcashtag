@@ -1,0 +1,7 @@
+tweepy
+yfinance
+kafka-python
+flask
+plotly
+psycopg2-binary
+pyspark
