@@ -1,6 +1,24 @@
-# hashtagcashtag
-Big data pipeline for user sentiment analysis on US stock market
+#  HashtagCashtag (Beginner-Friendly Version)
 
+This is a simplified, beginner-friendly version of the original HashtagCashtag project, restructured for easy local demo and portfolio use.
+
+# Project Structure
+
+hashtagcashtag/
+├── ingestion/
+│   ├── twitter_stream.py           # Collects tweets with $ symbols
+│   └── stock_stream.py             # Collects stock prices via yfinance
+├── processing/
+│   └── spark_sentiment.py          # Spark job to process tweets + sentiment
+├── dashboard/
+│   └── app.py                      # Flask web app to show trends
+├── db/
+│   └── schema.sql                  # PostgreSQL schema setup
+├── docker-compose.yml             # Kafka, Zookeeper, PostgreSQL setup
+├── requirements.txt               # Python dependencies
+└── README.md                      # Your project documentation
+
+---
 
 #  1. Installation & Setup (Local)
 
@@ -15,6 +33,20 @@ pip install -r requirements.txt
 ```bash
 docker-compose up -d
 ```
+
+This will start the following services:
+
+| Service     | Purpose                             | Port   |
+|-------------|-------------------------------------|--------|
+| `zookeeper` | Required by Kafka                   | 2181   |
+| `kafka`     | Message broker for streaming data   | 9092   |
+| `postgres`  | Stores your processed sentiment data| 5432   |
+| `pgadmin`   | Web GUI for PostgreSQL              | 8081   |
+
+### You can access:
+- Kafka at `localhost:9092`
+- PostgreSQL at `localhost:5432`
+- PgAdmin at [http://localhost:8081](http://localhost:8081) (user: admin@cashtag.local / pass: admin)
 
 ---
 
@@ -145,4 +177,3 @@ pyspark
 - Open your Flask app and demo your dashboard
 
 You're all set to impress your manager with a fully working, beginner-friendly real-time data engineering project! 🎉
-
