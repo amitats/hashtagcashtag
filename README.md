@@ -1,6 +1,6 @@
-#  HashtagCashtag (Beginner-Friendly Version)
+#  HashtagCashtag
 
-This is a simplified, beginner-friendly version of the original HashtagCashtag project, restructured for easy local demo and portfolio use.
+This is a simplified Big data pipeline for user sentiment analysis on US stock market
 
 # Project Structure
 
